@@ -1,22 +1,168 @@
-# BST
-# BST - Árbol Binario de Búsqueda
+# INSTRUCCIONES PARA COMPILAR Y EJECUTAR EL PROYECTO BST
 
-Proyecto de Programación 3 sobre Árboles Binarios de Búsqueda (BST) en Java.
+## 1. Abrir la terminal
 
-## Funcionalidades
+Abrir:
 
-- Inserción
-- Búsqueda
-- Eliminación
-- Recorridos
-- Conteo de nodos
-- Validación BST
-- Balanceo
-- LCA
-- Inversión del árbol
+* CMD
+* PowerShell
+* o la terminal de VS Code
 
-## Cómo ejecutar
+---
 
+# 2. Entrar a la carpeta del proyecto
 
+Ejemplo:
+
+```bash
+cd C:\Users\USUARIO\Downloads\arboles\arboles
+```
+
+---
+
+# 3. Compilar el proyecto
+
+Ejecutar:
+
+```bash
 mvn compile
+```
+
+Si todo está correcto debe aparecer:
+
+```text
+BUILD SUCCESS
+```
+
+---
+
+# 4. Ejecutar el programa
+
+Ejecutar:
+
+```bash
 java -cp target/classes umg.edu.progra.arboles.Principal
+```
+
+---
+
+# 5. Resultado esperado
+
+El programa mostrará:
+
+* información general del árbol
+* recorridos
+* búsquedas
+* eliminaciones
+* problemas 1–5
+* ejercicios extra
+
+Ejemplo:
+
+```text
+===== Arbol Binario de Busqueda =====
+
+Tamanio: 8
+Altura: 3
+Minimo: 10
+Maximo: 80
+Hojas: 4
+```
+
+y al final:
+
+```text
+===== EJERCICIOS EXTRA =====
+
+--- E1. k-esimo menor ---
+1er menor: 10
+3er menor: 40
+5to menor: 80
+
+--- E2. Valores entre 15 y 70 ---
+20 30 40 60 70
+
+--- E3. Diametro ---
+Diametro del arbol: 5
+
+--- E4. Construccion desde args ---
+No se enviaron argumentos
+```
+
+---
+
+# 6. Ejecutar con argumentos (Ejercicio E4)
+
+También se puede construir un árbol enviando valores desde consola.
+
+Ejemplo:
+
+```bash
+java -cp target/classes umg.edu.progra.arboles.Principal 90 40 15 70 100 5
+```
+
+El programa construirá automáticamente otro BST usando esos números.
+
+---
+
+# 7. Si aparece un error
+
+Verificar:
+
+* que Maven esté instalado
+* que Java esté instalado
+* que el archivo `pom.xml` exista
+* que las clases estén dentro de:
+
+```text
+src/main/java/
+```
+
+---
+
+# 8. Comandos útiles
+
+## Limpiar archivos compilados
+
+```bash
+mvn clean
+```
+
+---
+
+## Compilar nuevamente
+
+```bash
+mvn compile
+```
+
+---
+
+## Ejecutar nuevamente
+
+```bash
+java -cp target/classes umg.edu.progra.arboles.Principal
+```
+
+---
+
+# 9. Estructura esperada del proyecto
+
+```text
+arboles/
+│
+├── pom.xml
+│
+├── src/
+│   └── main/
+│       └── java/
+│           └── umg/
+│               └── edu/
+│                   └── progra/
+│                       └── arboles/
+│                           ├── Nodo.java
+│                           ├── ArbolBinarioBusqueda.java
+│                           └── Principal.java
+│
+└── target/
+```
